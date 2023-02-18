@@ -1,0 +1,19 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Default variable overrides
+$body-bg: #000;
+$body-color: #111;
+$primary: #0074d9;
+$danger: #ff4136;
+
+$custom-colors: (
+  "custom-color": #900
+);
+
+.center {
+    @extend .d-flex;
+    @extend .align-items-center;
+    @extend .justify-content-center;
+}
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
