@@ -1,0 +1,109 @@
+$primary: #009579;
+$primary-dark: #007f67;
+$secondary: #f77062;
+$error: #cc3333;
+$success: #4bb544;
+$border-radius: 4px;
+
+$bs-body-bg: $primary;
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    font-size: 18px;
+}
+
+.container {
+    width: 10vw;
+    max-width: 800px !important;
+    margin: 1rem;
+    padding: 2rem;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    border-radius: $border-radius;
+    background: #fff;
+}
+
+#login {
+    .title {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .message {
+        text-align: center;
+        margin-bottom: 1rem;
+
+        &.success {
+            color: $success;
+        }
+
+        &.error {
+            color: $error;
+        }
+    }
+
+    .inputGroup {
+        margin-bottom: 1rem;
+    }
+
+    input {
+        display: block;
+        width: 100%;
+        padding: 0.75rem;
+        box-sizing: border-box;
+        border-radius: $border-radius;
+        border: 1px solid #dddddd;
+        outline: none;
+        background: #eeeeee;
+        transition: background 0.2s ease, border-color 0.2s ease;
+
+        &:focus {
+            border-color: $primary;
+            background: #fff;
+        }
+
+        &.error {
+            color: $error;
+            border-color: $error;
+        }
+    }
+
+    button {
+        width: 100%;
+        padding: 1rem 2rem;
+        font-weight: bold;
+        font-size: 1.1rem;
+        color: #fff;
+        border: none;
+        border-radius: $primary;
+        outline: none;
+        cursor: pointer;
+        background: $primary;
+
+        &:hover {
+            background: $primary-dark;
+        }
+
+        &:active {
+            transform: scale(0.98);
+        }
+    }
+
+    .errorMessage {
+        margin-top: 0.5rem;
+        font-size: 0.85rem;
+        color: $error;
+    }
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";
