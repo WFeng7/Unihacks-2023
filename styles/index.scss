@@ -1,16 +1,37 @@
 $primary: #f77062;
+$secondary: #010c0e;
 
+$navbar-brand-font-size: 2rem;
+
+@mixin primaryGradientText($direction) {
+  background-image: linear-gradient($direction, #ffb199 0%, #ff0844 80%);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 * body {
     height: 100%;
 }
 
 .navbar-brand {
-  background-image: linear-gradient(#ffb199 0%, #ff0844 80%);
-  background-size: 100%;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  @include primaryGradientText(to bottom);
 }
+
+#article {
+  #title {
+    @include primaryGradientText(to bottom left);
+    display: flex;
+    justify-content: center;
+    color: $secondary;
+    margin-top: 10vw;
+    font-size: 8vw;
+    font-weight: 700;
+    cursor: default;
+  }
+}
+
+
 
 
 
