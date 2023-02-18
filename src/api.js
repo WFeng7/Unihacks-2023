@@ -1,8 +1,8 @@
 var makeReq;
 var attemptLogin;
 (function() {
-  // const API_URL = 'https://unihacks2023.screwwcpss.repl.co';
-  const API_URL = 'http://localhost';
+  const API_URL = 'https://unihacks2023.screwwcpss.repl.co';
+  // const API_URL = 'http://localhost';
   // "SECURITY" TRUST
   let token = localStorage.getItem('token');
   makeReq = async function(path, body, contentType) {
