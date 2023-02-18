@@ -1,19 +1,16 @@
-@import "../node_modules/bootstrap/scss/bootstrap";
+$primary: #f77062;
 
-// Default variable overrides
-$body-bg: #000;
-$body-color: #111;
-$primary: #0074d9;
-$danger: #ff4136;
 
-$custom-colors: (
-  "custom-color": #900
-);
-
-.center {
-    @extend .d-flex;
-    @extend .align-items-center;
-    @extend .justify-content-center;
+* body {
+    height: 100%;
 }
 
-$theme-colors: map-merge($theme-colors, $custom-colors);
+.navbar-brand {
+  background-image: linear-gradient(#ffb199 0%, #ff0844 80%);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
