@@ -10849,7 +10849,7 @@ textarea.form-control-lg {
 }
 #navbar__logo {
   background-color: #ff8177;
-  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 80%);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -10882,7 +10882,7 @@ textarea.form-control-lg {
 }
 
 .navbar_btn {
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 1rem;
@@ -10893,8 +10893,8 @@ textarea.form-control-lg {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  padding: 10px;
-  height:100%;
+  padding: 10px 20px;
+  height: 100%;
   width: 100%;
   border: none;
   outline: none;
@@ -10923,13 +10923,13 @@ textarea.form-control-lg {
   }
 
   .navbar__menu {
-    display:grid;
+    display: grid;
     grid-template-columns: auto;
     margin: 0;
     width: 100%;
     position: absolute;
-    /* top: -1000px;
-    opacity: 0; */
+    top: -1000px;
+    opacity: 0;
     transition: all 0.5s ease;
     height: 50vh;
     z-index: -1;
@@ -10948,7 +10948,7 @@ textarea.form-control-lg {
   #navbar__logo {
     padding-left: 25px;
   }
-  .navbar__toggle.bar {
+  .navbar__toggle .bar {
     width: 25px;
     height: 3px;
     margin: 5px auto;
@@ -10961,7 +10961,7 @@ textarea.form-control-lg {
   .navbar__links {
     text-align: center;
     padding: 2rem;
-    width: 100%;
+    width: 94%;
     display: table;
   }
   #mobile-menu {
@@ -10978,8 +10978,21 @@ textarea.form-control-lg {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 94%;
     height: 80px;
     margin: 0;
+  }
+  .navbar__toggle .bar {
+    display: block;
+    cursor: pointer;
+  }
+  #mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  #mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  #mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
   }
 }
