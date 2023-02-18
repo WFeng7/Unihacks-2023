@@ -1,9 +1,9 @@
 function setFormMessage (formElement, type, message){
-    const messageElement = formElement.querySelector(".form__message");
+    const messageElement = formElement.querySelector("form .message");
 
     messageElement.textContent = message;
-    messageElement.classList.remove("form__mesage--success", "form__message--error");
-    messageElement.classList.add(`form__message--${type}`);
+    messageElement.classList.remove("form .message error", "error");
+    messageElement.classList.add(`${type}`);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
