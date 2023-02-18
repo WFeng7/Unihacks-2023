@@ -12,13 +12,13 @@ body {
    align-items: center;
    justify-items: center;
    font-size: 18px;
-   background: var(--color-primary);
+   background: var(--color-primary) !important;
    background-size:cover;
 }
 
 .container {
-    width: 400px;
-    max-width: 400px;
+    width: 400px !important;
+    max-width: 400px !important;
     margin: 1rem;
     padding: 2rem;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
