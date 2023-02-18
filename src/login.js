@@ -1,16 +1,19 @@
-function setFormMessage (formElement, type, message){
+function setFormMessage(formElement, type, message) {
     const messageElement = formElement.querySelector("form .message");
 
     messageElement.textContent = message;
-    messageElement.classList.remove("form .message error", "error");
-    messageElement.classList.add(`${type}`);
+    // messageElement.classList.remove("form .message error", "error");
+    // messageElement.classList.add(`${type}`);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
     const loginForm = document.querySelector("#login");
-    loginForm.addEventListener("submit", e => {
+    loginForm.addEventListener("submit", async e => {
         e.preventDefault();
-        //performing login here:
-        setFormMessage(loginForm, "error", "Invalid username/password combination");
+        try {
+            await attemptLogin(loginForm.elements.username.value, loginForm.elements.password.value);
+        } catch (e) {
+            setFormMessage(loginForm, "error", e);
+        }
     });
 });

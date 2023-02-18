@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,22 +8,25 @@
     <title>Login</title>
     <link rel="stylesheet" href="./styles/login.css">
 </head>
+
 <body class="bg-white">
     <div class="container">
         <form class="form" id="login">
             <h1 class="title">Login:</h1>
             <div class="message error"></div>
             <div class="inputGroup">
-                <input type="text" class="form__input" autofocus placeholder="Username">
+                <input type="text" class="form__input" autofocus placeholder="Username" name="username" autocomplete="off">
                 <div class="errorMessage"></div>
             </div>
             <div class="inputGroup">
-                <input type="password" class="form__input" autofocus placeholder="Password">
+                <input type="password" class="form__input" autofocus placeholder="Password" name="password">
                 <div class="errorMessage"></div>
             </div>
             <button type="submit">Continue</button>
         </form>
     </div>
+    <script src="./src/api.js"></script>
     <script src="./src/login.js"></script>
 </body>
+
 </html>
