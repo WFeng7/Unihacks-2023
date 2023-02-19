@@ -22,12 +22,11 @@ function patientClick(element) {
     let patient = patients[element.dataset.uuid];
     document.getElementById("patientName").textContent = `${patient.name} | ${patient.birthday} ${patient.gender}`;
     document.getElementById("patientNotes").textContent = patient.notes;
+    document.getElementById("viewPatientModal").dataset.uuid = element.dataset.uuid;
 }
 
 
 function getPatients() {
-    // Get the patients from the API
-
     makeReq('/api/getAll').then(txt => {
         let resp = JSON.parse(txt);
         console.log(resp);
@@ -39,7 +38,6 @@ function getPatients() {
             patients[user.id] = patientInfo;
             createPatientElement(user.id, patientInfo);
         })
-
     });
 }
 
@@ -73,5 +71,17 @@ function createPatient() {
         createPatientElement(id, patient);
     });
 }
+
+function editPatient() {
+    const uuid = document.getElementById("viewPatientModal").dataset.uuid;
+    let patient = patients[uuid];
+    patient.notes = document.getElementById("patientNotes").value;
+
+    makeReq(`/api/set/${uuid}`, JSON.stringify(patient), 'application/json').then(id => {
+        patients[id] = patient;
+    });
+
+}
+
 
 getPatients();
