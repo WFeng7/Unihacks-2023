@@ -8,6 +8,7 @@ var attemptLogin;
   makeReq = async function(path, body, contentType) {
     let data = await fetch(API_URL + path,
       {
+        method: body ? "POST" : "GET",
         mode: 'cors',
         headers: {
           'Content-Type': contentType,

@@ -40,21 +40,21 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Patient Name" aria-label="Patient Name">
-                        <input id="startDate" class="form-control" type="date" />
-                        <select class="form-select" id="inputGroupSelect01">
+                    <div id="createPatientInputs" class="input-group">
+                        <input id="nameSelect" type="text" class="form-control" placeholder="Patient Name" aria-label="Patient Name">
+                        <input id="dateSelect" class="form-control" type="date" />
+                        <select class="form-select" id="genderSelect">
                             <option selected>Gender</option>
-                            <option value="1">Male</option>
-                            <option value="2">Female</option>
-                            <option value="3">Nonbinary</option>
-                            <option value="4">Agender</option>
-                            <option value="5">Other</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Nonbinary</option>
+                            <option>Agender</option>
+                            <option>Other</option>
                         </select>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="createPatientSave">Save changes</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="createPatientSave" onclick="createPatient()">Create Patient</button>
                 </div>
             </div>
         </div>
