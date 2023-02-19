@@ -3,6 +3,14 @@
   height: 100%;
 }
 
+.navbar-brand {
+  background-image: linear-gradient(#ffb199 0%, #ff0844 80%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /*!
  * Bootstrap  v5.2.3 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors

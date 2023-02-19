@@ -1,12 +1,16 @@
 $primary: #f77062;
 
+
 * body {
     height: 100%;
 }
 
+.navbar-brand {
+  background-image: linear-gradient(#ffb199 0%, #ff0844 80%);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-// Default variable overrides
-// $body-bg: #000;
-// $body-color: #111;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
