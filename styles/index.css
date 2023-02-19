@@ -4,8 +4,7 @@ html {
 }
 
 * body {
-  height: 100%;
-  background-image: url("./assets/healthcheck.jpg") !important;
+  background-image: url("../assets/healthcheck.jpg") !important;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
