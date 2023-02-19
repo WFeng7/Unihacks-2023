@@ -1,9 +1,12 @@
 @charset "UTF-8";
 * body {
   height: 100%;
-  background: url("/assets/healthcheck.jpg") !important;
   background-size: cover;
+  background-image: url("../assets/healthcheck.jpg");
+  background-repeat: no-repeat;
   background-position: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .navbar-brand {
@@ -14,20 +17,45 @@
   -webkit-text-fill-color: transparent;
 }
 
+#article {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  padding-top: 15vw;
+  flex-grow: 1;
+  text-align: center;
+  position: relative;
+}
+
 #article #title {
   background-image: linear-gradient(to bottom left, #ffb199 0%, #ff0844 80%);
   background-size: 100%;
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: flex;
-  justify-content: center;
-  text-align: center;
   color: #010c0e;
-  margin-top: 10vw;
   font-size: 8vw;
   font-weight: 700;
   cursor: default;
+}
+#article p {
+  font-size: 1.5vw;
+  color: white;
+  max-width: 50%;
+}
+
+#article::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  /* border: 2px solid red; */
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+  opacity: 50%;
+  pointer-events: none;
 }
 
 /*!
