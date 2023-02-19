@@ -6,7 +6,7 @@ var attemptLogin;
   // "SECURITY" TRUST
   let token = localStorage.getItem('token');
   makeReq = async function(path, body, contentType) {
-    let data = await fetch(APIURL + path,
+    let data = await fetch(API_URL + path,
       {
         mode: 'cors',
         headers: {
