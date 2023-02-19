@@ -46,14 +46,25 @@
   font-size: 8vw;
   font-weight: 700;
   cursor: default;
+  animation: fadeIn 1s;
 }
 #article p {
   font-size: 1.5vw;
   color: white;
   max-width: 50%;
   text-align: center;
+  animation-name: fadeIn;
+  animation: fadeIn 2s;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /*!
  * Bootstrap  v5.2.3 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors

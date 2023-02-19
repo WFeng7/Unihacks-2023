@@ -5,7 +5,7 @@ const signedIn = (localStorage.getItem("token") ? true : false);
 let accountButton =  document.getElementById("accountButton");
 
 if (signedIn) {
-   accountButton.innerText = "Logout";
+    accountButton.innerText = "Logout";
     document.getElementById("signupLink").style.display = "none";
 } else {
     document.getElementById("dashboardLink").style.display = "none";
@@ -16,6 +16,6 @@ accountButton.onclick = () => {
         localStorage.removeItem("token");
         location.reload();
     } else {
-        location.href = "/login";
+        location.href = "/login.html";
     }
 }
