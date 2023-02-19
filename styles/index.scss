@@ -22,8 +22,6 @@ html {
     height: 100%;
 }
 
-
-
 .navbar-brand {
   @include primaryGradientText(to bottom);
 }
@@ -51,7 +49,7 @@ html {
     color: $secondary;
     margin-top: 10vw;
     font-size: 8vw;
-    font-weight: 700;
+    font-weight: 500;
     cursor: default;
     animation: fadeIn 1s;
   }
@@ -62,8 +60,9 @@ html {
     text-align: center;
     animation-name: fadeIn;
     animation: fadeIn 2s;
+    font-weight: 400;
   }
-  height: 52.8vh;
+  height: 52.3vh;
   user-select: none;
 }
 
@@ -89,15 +88,16 @@ html {
       color: $secondary;
       margin-top: 10vw;
       font-size: 8vw;
-      font-weight: 700;
+      font-weight: 500;
       cursor: default;
       animation: fadeIn 1s;
     }
   
     p {
-      font-size: 1.5vw;
+      font-size: 1.2vw;
+      font-weight: 400;
       color: black;
-      max-width: 50%;
+      max-width: 70%;
       text-align: center;
       animation-name: fadeIn;
       animation: fadeIn 2s;

@@ -5,7 +5,7 @@ const signedIn = (localStorage.getItem("token") ? true : false);
 let accountButton =  document.getElementById("accountButton");
 
 if (signedIn) {
-    accountButton.innerText = "Logout";
+    accountButton.innerText = "Log Out";
     document.getElementById("signupLink").style.display = "none";
 } else {
     document.getElementById("dashboardLink").style.display = "none";
