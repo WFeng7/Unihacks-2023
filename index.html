@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HealthCheck</title>
+    <title>HealthCheck | Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="./styles/index.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="./"><i class="fa-solid fa-heart-pulse"></i> HealthCheck</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -23,14 +23,14 @@
 
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li id="dashboardLink" class="nav-item">
-                        <a class="nav-link" href="./">Dashboard</a>
+                        <a class="nav-link" href="./dashboard.html">Dashboad</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://devpost.com/submit-to/17291-unihacks-2023/manage/submissions">Learn More</a>
+                        <a class="nav-link" href="#about">About Us</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
-                    <li id="signupButton" class="nav-item">
+                    <li id="signupLink" class="nav-item">
                         <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="left" data-bs-content="Signups are restricted to medical personnel.">
                             <a class="nav-link">Sign Up</a>
                         </span>
@@ -42,20 +42,45 @@
         </div>
     </nav>
 
-    <div id="article">
-        <h1 id="title">Health Check</h1>
+    <section id="article">
+        <h1 id="title">HealthCheck</h1>
         <p class="container-sm">
             We know you're tired of pouring through papers in order to find your patients details.
             Stop with the worry.
-            Use <b>Health Check</b> to spend less time on organizing and more time on your patients.
+            Use <b>HealthCheck</b> to spend less time on organizing and more time on your patients.
         </p>
+    </section>
 
-    </div>
+    <section id="about">
+        <h1 id="about-title">About</h1>
+        <p class="container-fluid">
+            We created HealthCheck with one goal in mind: To make patient data more accessible. <br><br>
+
+            At HealthCheck, we believe that every doctor should be able to access their patient's medical data quickly and easily,
+            especially during emergencies. The minutes spent flipping through a file cabinet could be the very time that makes the
+            difference between life and death. That's why we created HealthCheck, a free, open-source platform that allows doctors
+            to easily manage patient medical information in a secure and efficient way.<br><br>
+
+            We offer a minimalistic, yet multi-functional platform that will make it easy for doctors to streamline their tasks
+            without overwhelming them with unnecessary features. Its easy-to-use nature allows new doctors to quickly adapt to the
+            platform, while its advanced capabilities cater to the needs of experienced healthcare professionals, making it a
+            versatile tool for all levels of medical expertise.<br><br>
+
+            We also understand that data security is a top concern for healthcare provides around the world. That's why we have
+            implemented state-of-the-art security measures to ensure that all patient data is protected and remains confidential.<br><br>
+
+            Our goal at HealthCheck is to improve the quality of care and streamline the healthcare system by making patient data
+            more accessible to medical professionals. We believe that by providing doctors with the necessary tools to store and
+            study patient medical information, we can help create a more patient-centric and efficient healthcare system.<br><br>
+
+            Join us in our mission to revolutionize healthcare by signing up for HealthCheck today.<br><br>
+        </p>
+    </section>
 
 
 
-    <script src="./node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
     <script src="./src/index.js"></script>
 </body>
 

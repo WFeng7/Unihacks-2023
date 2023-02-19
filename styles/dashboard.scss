@@ -1,0 +1,113 @@
+@import "./index.css";
+
+$primary: #f77062;
+$secondary: #007f67;
+
+$navbar-brand-font-size: 2rem;
+
+@mixin primaryGradientText($direction) {
+    background-image: linear-gradient($direction, #ffb199 0%, #ff0844 80%);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+* body {
+    height: 100%;
+    
+    background-image: linear-gradient(#91b7e9 0%, #808fe6 100%) !important;
+    background-repeat: no-repeat;
+    margin: 0;
+    background-attachment: fixed;
+    
+}
+
+.navbar {
+    background-color: white;
+    border-bottom: 1px solid black;
+}
+
+#dashboard {
+    display: flex;
+    width: 75%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    width: 100%;
+
+    .patient {
+        background-color: white;
+        display: flex;
+        width: 20rem;
+        height: 20rem;
+        padding: 3rem;
+        margin: 3rem;
+        border: solid 3px black;
+        cursor: pointer;
+
+        &:hover {
+            .name {
+                font-size: 2.25rem;
+            }
+        }
+
+        .name {
+            font-size: 2rem;
+            // max-width: 100%;
+            text-align: center;
+            word-break: break-all;
+        }
+
+    }
+
+    .addPatient {
+        background-color: white;
+        display: flex;
+        width: 20rem;
+        height: 20rem;
+        padding: 3rem;
+        margin: 3rem;
+        border: dotted 2px black;
+
+        align-items: center;
+        justify-content: center;
+
+        cursor: pointer;
+
+        transition: border-width 0.2s linear;
+
+        &:hover {
+            border-width: 5px;
+            // border: dotted 3px black;
+
+            * {
+                font-size: 6rem;
+            }
+        }
+
+        i {
+            transition: font-size 0.2s ease-in;
+            font-size: 5rem;
+        }
+    }
+}
+
+.popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    &::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(4px);
+    }
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";

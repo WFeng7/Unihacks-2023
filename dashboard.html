@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthCheck</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="./styles/dashboard.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/"><i class="fa-solid fa-heart-pulse"></i> HealthCheck</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedCon/tent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html#about">About Us</a>
+                    </li>
+                </ul>
+
+                <button id="accountButton" class="btn btn-primary">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="modal fade" id="createPatientModal" tabindex="-1" aria-labelledby="createPatientLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Create New Patient</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="createPatientInputs" class="input-group">
+                        <input id="nameSelect" type="text" class="form-control" placeholder="Patient Name" aria-label="Patient Name">
+                        <input id="dateSelect" class="form-control" type="date" />
+                        <select class="form-select" id="genderSelect">
+                            <option selected>Gender</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Nonbinary</option>
+                            <option>Agender</option>
+                            <option>Other</option>
+                        </select>
+                        <div class="input-group mb-3">
+                            <input type="text" id="emailUsernameSelect" class="form-control" placeholder="Username" aria-label="Username">
+                            <span class="input-group-text">@</span>
+                            <input type="text" id="emailDomainSelect" class="form-control" placeholder="Server" aria-label="Server">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="createPatientSave" onclick="createPatient()">Create Patient</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="viewPatientModal" tabindex="-1" aria-labelledby="viewPatientLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="patientName">There was an error.</h1>
+                    <button type="button" class="btn" aria-label="Delete Patient" onclick="deletePatient()"><i class="fa-solid fa-trash-can"></i></button>
+                </div>
+                <textarea class="modal-body" id="patientNotes">
+
+                </textarea>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary mr-auto" id="contactButton" onclick="contactPatient()">Contact</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="saveButton" onclick="editPatient()">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="dashboard">
+        <div class="addPatient" data-bs-toggle="modal" data-bs-target="#createPatientModal">
+            <i class="fa-solid fa-plus"></i>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+    <script src="./src/util.js"></script>
+    <script src="./src/dashboard.js"></script>
+</body>
+
+</html>

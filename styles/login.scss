@@ -7,9 +7,15 @@ $border-radius: 4px;
 
 $bs-body-bg: $primary;
 
+html,
 body {
-    height: 100vh;
+    height: 100%;
     font-size: 18px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
 }
 
 .loginContainer {
@@ -17,7 +23,8 @@ body {
     align-items: center;
     justify-items: center;
     width: 100%;
-    height: 100%;
+    flex-basis: 0;
+    flex-grow: 1;
 }
 
 .container {

@@ -6,8 +6,9 @@ var attemptLogin;
   // "SECURITY" TRUST
   let token = localStorage.getItem('token');
   makeReq = async function(path, body, contentType) {
-    let data = await fetch(APIURL + path,
+    let data = await fetch(API_URL + path,
       {
+        method: body ? "POST" : "GET",
         mode: 'cors',
         headers: {
           'Content-Type': contentType,
@@ -16,6 +17,7 @@ var attemptLogin;
         body
       });
     if (data.status === 401) return void (window.location.href = './login.html');
+    if (data.status < 200 || data.status >= 300) throw await data.text();
     return data.text();
   };
   attemptLogin = async function(user, pass) {
@@ -29,7 +31,7 @@ var attemptLogin;
     if (data.status === 200) {
       token = await data.text();
       localStorage.setItem('token', token);
-      window.location.href = './index.html';
+      window.location.href = './dashboard.html';
     } else throw "Invalid username/password combination";
   };
 })();
