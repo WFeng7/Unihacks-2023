@@ -24,9 +24,9 @@ $navbar-brand-font-size: 2rem;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    
+
     width: 100%;
-    
+
     .patient {
         display: flex;
         width: 20rem;
@@ -34,24 +34,24 @@ $navbar-brand-font-size: 2rem;
         padding: 3rem;
         margin: 3rem;
         border: solid 3px black;
-        
+
         * {
             height: fit-content;
         }
-        
+
         .name {
             font-size: 3rem;
             max-width: 100%;
             align-self: left;
         }
-        
+
         .age {
             font-size: 3rem;
             align-self: right;
         }
-        
+
     }
-    
+
     .addPatient {
         display: flex;
         width: 20rem;
@@ -59,23 +59,44 @@ $navbar-brand-font-size: 2rem;
         padding: 3rem;
         margin: 3rem;
         border: dotted 2px black;
-        
+
         align-items: center;
         justify-content: center;
-        
+
         cursor: pointer;
-        
+
+        transition: border-width 0.2s linear;
+
         &:hover {
-            border: dotted 3px black;
-            
+            border-width: 5px;
+            // border: dotted 3px black;
+
             * {
                 font-size: 6rem;
             }
         }
-        
+
         i {
+            transition: font-size 0.2s ease-in;
             font-size: 5rem;
         }
+    }
+}
+
+.popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    &::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(4px);
     }
 }
 

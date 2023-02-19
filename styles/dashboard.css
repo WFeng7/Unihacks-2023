@@ -44,15 +44,34 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: border-width 0.2s linear;
 }
 #dashboard .addPatient:hover {
-  border: dotted 3px black;
+  border-width: 5px;
 }
 #dashboard .addPatient:hover * {
   font-size: 6rem;
 }
 #dashboard .addPatient i {
+  transition: font-size 0.2s ease-in;
   font-size: 5rem;
+}
+
+.popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.popup::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
 }
 
 /*!

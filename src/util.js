@@ -16,6 +16,7 @@ var attemptLogin;
         body
       });
     if (data.status === 401) return void (window.location.href = './login.html');
+    if (data.status < 200 || data.status >= 300) throw await data.text();
     return data.text();
   };
   attemptLogin = async function(user, pass) {

@@ -34,35 +34,21 @@
 
     <div id="dashboard">
         <!--Dashboard info will go here-->
-        <div class="patient">
+        <template id="patientTemplate" class="patient">
             <p class="name">John DoeA</p>
             <p class="age">48</p>
             <button class="btn btn-primary" class="details">More Info</button>
-        </div>
-        <div class="patient">
-            <p class="name">John Doe</p>
-            <p class="age">48</p>
-            <button class="details"></button>
-        </div>
-        <div class="patient">
-            <p class="name">John Doe</p>
-            <p class="age">48</p>
-            <button class="details"></button>
-        </div>
-        <div class="patient">
-            <p class="name">John Doe</p>
-            <p class="age">48</p>
-            <button class="details"></button>
-        </div>
-        <div class="patient">
-            <p class="name">John Doe</p>
-            <p class="age">48</p>
-            <button class="details"></button>
-        </div>
+        </template>
         <div class="addPatient">
             <i class="fa-solid fa-plus"></i>
         </div>
     </div>
+
+    <template id="popupTemplate">
+        <section class="popup">
+
+        </section>
+    </template>
 
 
     <script src="./node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
