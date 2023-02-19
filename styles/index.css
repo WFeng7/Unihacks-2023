@@ -10,6 +10,9 @@
           background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.navbar-brand:hover {
+  background-image: linear-gradient(#ffb199 0%, black 80%);
+}
 
 /*!
  * Bootstrap  v5.2.3 (https://getbootstrap.com/)

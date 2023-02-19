@@ -10,7 +10,12 @@ $primary: #f77062;
   background-size: 100%;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  &:hover {
+    background-image: linear-gradient(#ffb199 0%, black 80%);
+  }
 }
+
 
 
 @import "../node_modules/bootstrap/scss/bootstrap";
