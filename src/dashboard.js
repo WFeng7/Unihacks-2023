@@ -80,7 +80,16 @@ function editPatient() {
     makeReq(`/api/set/${uuid}`, JSON.stringify(patient), 'application/json').then(id => {
         patients[id] = patient;
     });
+}
 
+function deletePatient() {
+    const uuid = document.getElementById("viewPatientModal").dataset.uuid;
+    if (uuid && confirm(`Are you sure that you want to delete ${patients[uuid].name}?`)) {
+        console.log(uuid);
+        makeReq(`/api/delete/${uuid}`, "", "application/json").then(id => {
+            location.reload();
+        })
+    }
 }
 
 
