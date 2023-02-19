@@ -1,6 +1,9 @@
 @charset "UTF-8";
 * body {
   height: 100%;
+  background: url("/assets/healthcheck.jpg") !important;
+  background-size: cover;
+  background-position: center;
 }
 
 .navbar-brand {
@@ -19,6 +22,7 @@
   -webkit-text-fill-color: transparent;
   display: flex;
   justify-content: center;
+  text-align: center;
   color: #010c0e;
   margin-top: 10vw;
   font-size: 8vw;

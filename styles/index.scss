@@ -12,6 +12,9 @@ $navbar-brand-font-size: 2rem;
 
 * body {
     height: 100%;
+    background: url('/assets/healthcheck.jpg') !important;
+    background-size: cover;
+    background-position: center;
 }
 
 .navbar-brand {
@@ -23,6 +26,7 @@ $navbar-brand-font-size: 2rem;
     @include primaryGradientText(to bottom left);
     display: flex;
     justify-content: center;
+    text-align: center;
     color: $secondary;
     margin-top: 10vw;
     font-size: 8vw;
