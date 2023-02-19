@@ -38,13 +38,13 @@ $navbar-brand-font-size: 2rem;
 
         &:hover {
             .name {
-                font-size: 4rem;
+                font-size: 2.25rem;
             }
         }
 
         .name {
-            font-size: 3rem;
-            max-width: 100%;
+            font-size: 2rem;
+            // max-width: 100%;
             text-align: center;
             word-break: break-all;
         }
