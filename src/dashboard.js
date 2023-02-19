@@ -1,4 +1,4 @@
-var patients = [];
+var patients = {};
 
 if (!localStorage.getItem("token")) {
     location.href = "./login.html";
@@ -19,6 +19,9 @@ function createPatientElement(uuid, patient) {
 
 function patientClick(element) {
     console.log(`UUID: ${element.dataset.uuid}, Name: ${element.children[0].innerText}`);
+    let patient = patients[element.dataset.uuid];
+    document.getElementById("patientName").textContent = `${patient.name} | ${patient.birthday} ${patient.gender}`;
+    document.getElementById("patientNotes").textContent = patient.notes;
 }
 
 
@@ -32,8 +35,8 @@ function getPatients() {
         // Loop through all patients
         resp.forEach(user => {
             if (user.type !== 2) return; // Check if the user is not a patient
-
             let patientInfo = JSON.parse(user.data);
+            patients[user.id] = patientInfo;
             createPatientElement(user.id, patientInfo);
         })
 
@@ -64,9 +67,9 @@ function createPatient() {
     nameElem.value = "";
     dateElem.value = "";
     genderElem.value = "";
-    patients.push(patient);
-
+    
     makeReq('/api/create', JSON.stringify(patient), 'application/json').then(id => {
+        patients[id] = patient;
         createPatientElement(id, patient);
     });
 }
