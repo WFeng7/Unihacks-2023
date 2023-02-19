@@ -22,11 +22,21 @@ function patientClick(element) {
 function getPatients() {
     // Get the patients from the API
 
+    makeReq('/api/getAll').then(txt => {
+        data = JSON.parse(txt);
+        console.log(data);
+        data.forEach(v => {
+            if (v.type !== 2) return;
+            alert('l i a m');
+        });
+    });
 }
 
 
 function createPatient() {
-
+    makeReq('/api/create', '{}', 'application/json').then(id => {
+        createPatientElement(id, 'liam fix this thx');
+    });
 }
 
 // Get the patients here instead of setting them manually
@@ -37,17 +47,4 @@ createPatientElement("34298089vce9rwij234b,dsf", "apple");
 {
     const dashboard = document.getElementById('dashboard');
     const patientTemplate = document.getElementById('patientTemplate');
-    makeReq('/api/getAll').then(txt => {
-        data = JSON.parse(txt);
-        console.log(data);
-        data.forEach(v => {
-            if (v.type !== 2) return;
-
-        });
-    });
-
-    const templatePopup = document.getElementById('popupTemplate');
-    document.querySelector('div.addPatient').addEventListener('click', () => {
-        document.body.appendChild(templatePopup.content.cloneNode(true));
-    });
 }
