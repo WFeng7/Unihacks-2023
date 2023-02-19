@@ -51,6 +51,11 @@
                             <option>Agender</option>
                             <option>Other</option>
                         </select>
+                        <div class="input-group mb-3">
+                            <input type="text" id="emailUsernameSelect" class="form-control" placeholder="Username" aria-label="Username">
+                            <span class="input-group-text">@</span>
+                            <input type="text" id="emailDomainSelect" class="form-control" placeholder="Server" aria-label="Server">
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -71,6 +76,7 @@
 
                 </textarea>
                 <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary mr-auto" id="contactButton" onclick="contactPatient()">Contact</button>
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="saveButton" onclick="editPatient()">Save changes</button>
                 </div>
             </div>

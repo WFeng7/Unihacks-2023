@@ -13,7 +13,10 @@ document.getElementById("accountButton").onclick = () => {
 function createPatientElement(uuid, patient) {
     let dashboard = document.getElementById("dashboard");
     // Yes, updating innerHTML is slow. It's better than 18 lines of setting everything individually
-    dashboard.innerHTML += `<div class="patient" data-bs-toggle="modal" data-bs-target="#viewPatientModal" data-uuid="${uuid}" onclick="patientClick(this)"><p class="name">${patient.name}</p></div>`;
+    dashboard.innerHTML += `
+    <div class="patient" data-bs-toggle="modal" data-bs-target="#viewPatientModal" data-uuid="${uuid}" onclick="patientClick(this)">
+        <p class="name">${patient.name}</p>
+    </div>`;
 
 }
 
@@ -23,6 +26,8 @@ function patientClick(element) {
     document.getElementById("patientName").textContent = `${patient.name} | ${patient.birthday} ${patient.gender}`;
     document.getElementById("patientNotes").value = patient.notes;
     document.getElementById("viewPatientModal").dataset.uuid = element.dataset.uuid;
+    document.getElementById("emailUsernameSelect").value = "";
+    document.getElementById("emailDomainSelect").value = "";
 }
 
 
@@ -45,12 +50,14 @@ class Patient {
     name;
     birthday;
     gender;
+    email;
     notes;
 
-    constructor(name, birthday, gender, notes) {
+    constructor(name, birthday, gender, email, notes) {
         this.name = name;
         this.birthday = birthday;
         this.gender = gender;
+        this.email = email;
         this.notes = notes;
     }
 }
@@ -60,16 +67,26 @@ function createPatient() {
     let nameElem = document.getElementById("nameSelect");
     let dateElem = document.getElementById("dateSelect");
     let genderElem = document.getElementById("genderSelect");
+    let emailUsernameElem = document.getElementById("emailUsernameSelect");
+    let emailDomainElem = document.getElementById("emailDomainSelect");
 
-    let patient = new Patient(nameElem.value, dateElem.value, genderElem.value, "");
+    let patient = new Patient(nameElem.value, dateElem.value, genderElem.value, emailUsernameElem.value + "@" + emailDomainElem.value, "");
     nameElem.value = "";
     dateElem.value = "";
     genderElem.value = "";
+    emailUsernameElem.value = "";
+    emailDomainElem.value = "";
     
     makeReq('/api/create', JSON.stringify(patient), 'application/json').then(id => {
         patients[id] = patient;
         createPatientElement(id, patient);
     });
+}
+
+function contactPatient() {
+    const uuid = document.getElementById("viewPatientModal").dataset.uuid;
+    let patient = patients[uuid];
+    window.open("mailto:" + patient.email);
 }
 
 function editPatient() {

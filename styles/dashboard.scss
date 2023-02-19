@@ -1,7 +1,7 @@
 @import "./index.css";
 
 $primary: #f77062;
-$secondary: #010c0e;
+$secondary: #007f67;
 
 $navbar-brand-font-size: 2rem;
 
@@ -14,9 +14,18 @@ $navbar-brand-font-size: 2rem;
 
 * body {
     height: 100%;
-    background-image: none !important;
+    
+    background-image: linear-gradient(#91b7e9 0%, #808fe6 100%) !important;
+    background-repeat: no-repeat;
+    margin: 0;
+    background-attachment: fixed;
+    
 }
 
+.navbar {
+    background-color: white;
+    border-bottom: 1px solid black;
+}
 
 #dashboard {
     display: flex;
@@ -28,6 +37,7 @@ $navbar-brand-font-size: 2rem;
     width: 100%;
 
     .patient {
+        background-color: white;
         display: flex;
         width: 20rem;
         height: 20rem;
@@ -52,6 +62,7 @@ $navbar-brand-font-size: 2rem;
     }
 
     .addPatient {
+        background-color: white;
         display: flex;
         width: 20rem;
         height: 20rem;
