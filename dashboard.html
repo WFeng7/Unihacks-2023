@@ -23,7 +23,7 @@
 
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="https://devpost.com/submit-to/17291-unihacks-2023/manage/submissions">About Us</a>
+                        <a class="nav-link" href="./index.html#about">About Us</a>
                     </li>
                 </ul>
 
@@ -32,14 +32,54 @@
         </div>
     </nav>
 
+    <div class="modal fade" id="createPatientModal" tabindex="-1" aria-labelledby="createPatientLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Create New Patient</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Patient Name" aria-label="Patient Name">
+                        <input id="startDate" class="form-control" type="date" />
+                        <select class="form-select" id="inputGroupSelect01">
+                            <option selected>Gender</option>
+                            <option value="1">Male</option>
+                            <option value="2">Female</option>
+                            <option value="3">Nonbinary</option>
+                            <option value="4">Agender</option>
+                            <option value="5">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="createPatientSave">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="viewPatientModal" tabindex="-1" aria-labelledby="viewPatientLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="patientName">John Doe</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" contenteditable="true">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="saveButton">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <div id="dashboard">
-        <!--Dashboard info will go here-->
-        <template id="patientTemplate" class="patient">
-            <p class="name">John DoeA</p>
-            <p class="age">48</p>
-            <button class="btn btn-primary" class="details">More Info</button>
-        </template>
-        <div class="addPatient">
+        <div class="addPatient" data-bs-toggle="modal" data-bs-target="#createPatientModal">
             <i class="fa-solid fa-plus"></i>
         </div>
     </div>
