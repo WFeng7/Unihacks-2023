@@ -103,7 +103,7 @@ function deletePatient() {
     const uuid = document.getElementById("viewPatientModal").dataset.uuid;
     if (uuid && confirm(`Are you sure that you want to delete ${patients[uuid].name}?`)) {
         console.log(uuid);
-        makeReq(`/api/delete/${uuid}`, "", "application/json").then(id => {
+        makeReq(`/api/delete/${uuid}`).then(id => {
             location.reload();
         })
     }
