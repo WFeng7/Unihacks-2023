@@ -1,10 +1,14 @@
 @charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+
 * body {
-  height: 100%;
   background-image: url("/assets/healthcheck.jpg") !important;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 100% 100%;
 }
 
 .navbar-brand {
@@ -13,6 +17,21 @@
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+#article {
+  height: 52.8vh;
+}
+
+#about {
+  vertical-align: middle;
+  height: 100vh;
+  background-color: #010c0e;
+  background-image: url("/assets/about.jpg") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
 }
 
 #article {
@@ -51,6 +70,48 @@
 #article p {
   font-size: 1.5vw;
   color: white;
+  max-width: 50%;
+  text-align: center;
+  animation-name: fadeIn;
+  animation: fadeIn 2s;
+}
+
+#about {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+#about:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+  opacity: 50%;
+  z-index: -1;
+}
+#about #about-title {
+  background-image: linear-gradient(to bottom left, #ffb199 0%, #ff0844 80%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #010c0e;
+  margin-top: 10vw;
+  font-size: 8vw;
+  font-weight: 700;
+  cursor: default;
+  animation: fadeIn 1s;
+}
+#about p {
+  font-size: 1.5vw;
+  color: black;
   max-width: 50%;
   text-align: center;
   animation-name: fadeIn;
