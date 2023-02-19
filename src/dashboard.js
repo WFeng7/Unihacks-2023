@@ -43,8 +43,3 @@ function createPatient() {
 createPatientElement("34298089vce9rwij234b,dsf", "big mama");
 createPatientElement("34298089vce9rwij234b,dsf", "joe chungu");
 createPatientElement("34298089vce9rwij234b,dsf", "apple");
-
-{
-    const dashboard = document.getElementById('dashboard');
-    const patientTemplate = document.getElementById('patientTemplate');
-}
