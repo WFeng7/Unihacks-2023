@@ -11,11 +11,11 @@ $navbar-brand-font-size: 2rem;
 }
 
 * body {
-    height: 100%;
-    background-image: url('/assets/healthcheck.jpg') !important;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+  height: 100%;
+  background-image: url('../assets/healthcheck.jpg') !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .navbar-brand {
@@ -35,7 +35,7 @@ $navbar-brand-font-size: 2rem;
     opacity: 50%;
     z-index: -1;
   }
-  
+
   #title {
     @include primaryGradientText(to bottom left);
     display: flex;
@@ -48,6 +48,7 @@ $navbar-brand-font-size: 2rem;
     cursor: default;
     animation: fadeIn 1s;
   }
+
   p {
     font-size: 1.5vw;
     color: white;
@@ -56,13 +57,18 @@ $navbar-brand-font-size: 2rem;
     animation-name: fadeIn;
     animation: fadeIn 2s;
   }
-  
+
   user-select: none;
 }
 
 @keyframes fadeIn {
-  0% { opacity: 0;}
-  100% {opacity: 1;}
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 
