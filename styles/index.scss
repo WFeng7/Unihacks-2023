@@ -12,8 +12,9 @@ $navbar-brand-font-size: 2rem;
 
 * body {
     height: 100%;
-    background: url('/assets/healthcheck.jpg') !important;
+    background-image: url('/assets/healthcheck.jpg') !important;
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
@@ -22,6 +23,19 @@ $navbar-brand-font-size: 2rem;
 }
 
 #article {
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    opacity: 50%;
+    z-index: -1;
+  }
+  
   #title {
     @include primaryGradientText(to bottom left);
     display: flex;
@@ -33,6 +47,14 @@ $navbar-brand-font-size: 2rem;
     font-weight: 700;
     cursor: default;
   }
+  p {
+    font-size: 1.5vw;
+    color: white;
+    max-width: 50%;
+    text-align: center;
+  }
+  
+  user-select: none;
 }
 
 
