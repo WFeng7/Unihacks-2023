@@ -20,19 +20,16 @@
   padding: 3rem;
   margin: 3rem;
   border: solid 3px black;
+  cursor: pointer;
 }
-#dashboard .patient * {
-  height: -moz-fit-content;
-  height: fit-content;
+#dashboard .patient:hover .name {
+  font-size: 4rem;
 }
 #dashboard .patient .name {
   font-size: 3rem;
   max-width: 100%;
-  align-self: left;
-}
-#dashboard .patient .age {
-  font-size: 3rem;
-  align-self: right;
+  text-align: center;
+  word-break: break-all;
 }
 #dashboard .addPatient {
   display: flex;

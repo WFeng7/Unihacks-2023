@@ -34,20 +34,19 @@ $navbar-brand-font-size: 2rem;
         padding: 3rem;
         margin: 3rem;
         border: solid 3px black;
-        
-        * {
-            height: fit-content;
+        cursor: pointer;
+
+        &:hover {
+            .name {
+                font-size: 4rem;
+            }
         }
-        
+
         .name {
             font-size: 3rem;
             max-width: 100%;
-            align-self: left;
-        }
-        
-        .age {
-            font-size: 3rem;
-            align-self: right;
+            text-align: center;
+            word-break: break-all;
         }
         
     }
