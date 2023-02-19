@@ -40,7 +40,7 @@ html {
     opacity: 50%;
     z-index: -1;
   }
-
+  
   #title {
     @include primaryGradientText(to bottom left);
     display: flex;
@@ -53,7 +53,6 @@ html {
     cursor: default;
     animation: fadeIn 1s;
   }
-
   p {
     font-size: 1.5vw;
     color: white;
@@ -114,13 +113,8 @@ html {
     user-select: none;
 }
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
+  0% { opacity: 0;}
+  100% {opacity: 1;}
 }
 
 
