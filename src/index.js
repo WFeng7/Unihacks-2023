@@ -16,6 +16,6 @@ accountButton.onclick = () => {
         localStorage.removeItem("token");
         location.reload();
     } else {
-        location.href = "/login.html";
+        location.href = "./login.html";
     }
 }
