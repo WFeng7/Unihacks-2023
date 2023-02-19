@@ -29,7 +29,7 @@ var attemptLogin;
     if (data.status === 200) {
       token = await data.text();
       localStorage.setItem('token', token);
-      window.location.href = './index.html';
+      window.location.href = './dashboard.html';
     } else throw "Invalid username/password combination";
   };
 })();

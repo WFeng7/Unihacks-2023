@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HealthCheck</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/dashboard.css">
 </head>
 
 <body>
@@ -22,40 +22,52 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li id="dashboardLink" class="nav-item">
-                        <a class="nav-link" href="./dashboard.html">Dashboad</a>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://devpost.com/submit-to/17291-unihacks-2023/manage/submissions">About Us</a>
                     </li>
                 </ul>
-                <ul class="navbar-nav">
-                    <li id="signupLink" class="nav-item">
-                        <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="left" data-bs-content="Signups are restricted to medical personnel.">
-                            <a class="nav-link">Sign Up</a>
-                        </span>
-                    </li>
-                </ul>
 
-                <button id="accountButton" class="btn btn-primary">Login</button>
+                <button id="accountButton" class="btn btn-primary">Logout</button>
             </div>
         </div>
     </nav>
 
-    <div id="article">
-        <h1 id="title">HealthCheck</h1>
-        <p class="container-sm">
-            We know you're tired of pouring through papers in order to find your patients details.
-            Stop with the worry.
-            Use <b>HealthCheck</b> to spend less time on organizing and more time on your patients.
-        </p>
+    <div id="dashboard">
+        <!--Dashboard info will go here-->
+        <div class="patient">
+            <p class="name">John DoeA</p>
+            <p class="age">48</p>
+            <button class="btn btn-primary" class="details">More Info</button>
+        </div>
+        <div class="patient">
+            <p class="name">John Doe</p>
+            <p class="age">48</p>
+            <button class="details"></button>
+        </div>
+        <div class="patient">
+            <p class="name">John Doe</p>
+            <p class="age">48</p>
+            <button class="details"></button>
+        </div>
+        <div class="patient">
+            <p class="name">John Doe</p>
+            <p class="age">48</p>
+            <button class="details"></button>
+        </div>
+        <div class="patient">
+            <p class="name">John Doe</p>
+            <p class="age">48</p>
+            <button class="details"></button>
+        </div>
+        <div class="addPatient">
+            <i class="fa-solid fa-plus"></i>
+        </div>
     </div>
-
 
 
     <script src="./node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="./src/index.js"></script>
+    <script src="./src/dashboard.js"></script>
 </body>
 
 </html>
