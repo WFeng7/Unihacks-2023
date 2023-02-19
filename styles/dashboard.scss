@@ -1,0 +1,82 @@
+@import "./index.css";
+
+$primary: #f77062;
+$secondary: #010c0e;
+
+$navbar-brand-font-size: 2rem;
+
+@mixin primaryGradientText($direction) {
+    background-image: linear-gradient($direction, #ffb199 0%, #ff0844 80%);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+* body {
+    height: 100%;
+    background-image: none !important;
+}
+
+
+#dashboard {
+    display: flex;
+    width: 75%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+    width: 100%;
+    
+    .patient {
+        display: flex;
+        width: 20rem;
+        height: 20rem;
+        padding: 3rem;
+        margin: 3rem;
+        border: solid 3px black;
+        
+        * {
+            height: fit-content;
+        }
+        
+        .name {
+            font-size: 3rem;
+            max-width: 100%;
+            align-self: left;
+        }
+        
+        .age {
+            font-size: 3rem;
+            align-self: right;
+        }
+        
+    }
+    
+    .addPatient {
+        display: flex;
+        width: 20rem;
+        height: 20rem;
+        padding: 3rem;
+        margin: 3rem;
+        border: dotted 2px black;
+        
+        align-items: center;
+        justify-content: center;
+        
+        cursor: pointer;
+        
+        &:hover {
+            border: dotted 3px black;
+            
+            * {
+                font-size: 6rem;
+            }
+        }
+        
+        i {
+            font-size: 5rem;
+        }
+    }
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";

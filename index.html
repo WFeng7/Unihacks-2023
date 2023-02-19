@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="/"><i class="fa-solid fa-heart-pulse"></i> HealthCheck</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -23,14 +23,14 @@
 
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li id="dashboardLink" class="nav-item">
-                        <a class="nav-link" href="/">Dashboard</a>
+                        <a class="nav-link" href="./dashboard.html">Dashboad</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://devpost.com/submit-to/17291-unihacks-2023/manage/submissions">Learn More</a>
+                        <a class="nav-link" href="#about">About Us</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
-                    <li id="signupButton" class="nav-item">
+                    <li id="signupLink" class="nav-item">
                         <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-placement="left" data-bs-content="Signups are restricted to medical personnel.">
                             <a class="nav-link">Sign Up</a>
                         </span>
@@ -42,15 +42,29 @@
         </div>
     </nav>
 
-    <div id="article">
-        <h1 id="title">Health Check</h1>
+    <section id="article">
+        <h1 id="title">HealthCheck</h1>
         <p class="container-sm">
             We know you're tired of pouring through papers in order to find your patients details.
             Stop with the worry.
-            Use <b>Health Check</b> to spend less time on organizing and more time on your patients.
+            Use <b>HealthCheck</b> to spend less time on organizing and more time on your patients.
         </p>
-
-    </div>
+    </section>
+    
+    <section id="about">
+        <h1 id="about-title">About</h1>
+        <p class="container-sm">
+            We created HealthCheck with one goal in mind: Make data more accessible.
+            In todays digital world, we take everything for granted, and an example of that is our health information being easily
+            accessible by hospitals. It is critical that doctors can look at past data to aid in diagnosing with possible diseases
+            or chronic illnesses.
+            Not all hospitals can leverage this though.
+            according to https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5654179/ in sub-Saharan Africa, they "lag in electronic health
+            record adoption" and we want to help with that. HealthCheck provides with secure log-in where we encrypted passwords so
+            in the unlikely event of a data-breach, the hackers will be unable to figure out the credentials. We created our own API
+            so in the future we are able to make changes and keep the code up to date.
+        </p>
+    </section>
 
 
 
