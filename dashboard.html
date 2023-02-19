@@ -32,10 +32,33 @@
         </div>
     </nav>
 
-    <button type="button" class="btn btn-primary" >
-        Launch demo modal
-    </button>
-
+    <div class="modal fade" id="createPatientModal" tabindex="-1" aria-labelledby="createPatientLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Create New Patient</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Patient Name" aria-label="Patient Name">
+                        <input id="startDate" class="form-control" type="date" />
+                        <select class="form-select" id="inputGroupSelect01">
+                            <option selected>Gender</option>
+                            <option value="1">Male</option>
+                            <option value="2">Female</option>
+                            <option value="3">Nonbinary</option>
+                            <option value="4">Agender</option>
+                            <option value="5">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="createPatientSave">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="modal fade" id="viewPatientModal" tabindex="-1" aria-labelledby="viewPatientLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-scrollable">
@@ -48,7 +71,7 @@
                     
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="saveButton">Save changes</button>
                 </div>
             </div>
         </div>
@@ -56,7 +79,7 @@
 
 
     <div id="dashboard">
-        <div class="addPatient">
+        <div class="addPatient" data-bs-toggle="modal" data-bs-target="#createPatientModal">
             <i class="fa-solid fa-plus"></i>
         </div>
     </div>
