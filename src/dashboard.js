@@ -21,7 +21,7 @@ function patientClick(element) {
     console.log(`UUID: ${element.dataset.uuid}, Name: ${element.children[0].innerText}`);
     let patient = patients[element.dataset.uuid];
     document.getElementById("patientName").textContent = `${patient.name} | ${patient.birthday} ${patient.gender}`;
-    document.getElementById("patientNotes").textContent = patient.notes;
+    document.getElementById("patientNotes").value = patient.notes;
     document.getElementById("viewPatientModal").dataset.uuid = element.dataset.uuid;
 }
 
